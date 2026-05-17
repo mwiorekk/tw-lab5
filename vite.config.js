@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [tailwindcss()],
-  base: "/<REPO>/",
+  base: "/tw-lab5/",
 });
