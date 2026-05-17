@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Laboratorium 5</title>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1 class="text-2xl font-bold text-primary">Czas od daty urodzenia</h1>
+        <form
+          id="datePickerForm"
+          class="grid grid-cols-2 grid-rows-3 max-w-md gap-4 items-center"
+        >
+          <label for="dateDayPicker">Dzień urodzenia:</label>
+          <input
+            type="number"
+            name="dateDayPicker"
+            id="dateDayPicker"
+            placeholder="1"
+            min="1"
+            max="31"
+          />
+          <label for="dateMonthPicker">Miesiąc urodzenia:</label>
+          <select name="dateMonthPicker" id="dateMonthPicker">
+            <option value="1">Styczeń</option>
+            <option value="2">Luty</option>
+            <option value="3">Marzec</option>
+            <option value="4">Kwiecień</option>
+            <option value="5">Maj</option>
+            <option value="6">Czerwiec</option>
+            <option value="7">Lipiec</option>
+            <option value="8">Sierpień</option>
+            <option value="9">Wrzesień</option>
+            <option value="10">Październik</option>
+            <option value="11">Listopad</option>
+            <option value="12">Grudzień</option>
+          </select>
+          <button
+            class="bg-blue-300 p-4 col-span-2"
+            type="submit"
+            id="dateSumbit"
+          >
+            Sprawdź
+          </button>
+        </form>
+      </section>
+    </main>
+    <dialog
+      id="results-modal"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 p-2 bg-gray-200 text-red-600"
+    >
+      <div class="flex justify-end gap-12 text-xl">
+        <h2>Czas od daty urodzenia</h2>
+        <button commandfor="results-modal" command="close">X</button>
+      </div>
+      <p id="results"></p>
+    </dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
